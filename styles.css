@@ -1054,6 +1054,19 @@ section h2 {
     grid-template-columns: 1fr;
   }
 
+  .case-card {
+    min-height: auto;
+  }
+
+  .case-card img {
+    height: 300px;
+    min-height: unset;
+  }
+
+  .case-card div {
+    align-self: auto;
+  }
+
   .outcome,
   .step {
     min-height: auto;
@@ -1131,6 +1144,19 @@ section h2 {
   .step h3,
   .case-card h3 {
     margin-top: 34px;
+  }
+
+  .case-card {
+    min-height: auto;
+  }
+
+  .case-card img {
+    min-height: 260px;
+  }
+
+  .case-card div {
+    align-self: auto;
+    padding: clamp(24px, 5vw, 40px);
   }
 
   .faq-item summary {
