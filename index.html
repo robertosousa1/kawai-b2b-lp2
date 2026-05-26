@@ -173,8 +173,8 @@
   </section>
 
   <section class="testimonial reveal" aria-label="Depoimento">
-    <p>"Não compramos plantas — compramos critério, previsibilidade e valorização do ativo."</p>
-    <span>Espaço para depoimento real de cliente, síndico profissional ou facilities</span>
+    <p>“A relação entre os indivíduos e seu ambiente pode ser um determinante de como eles se sentem, agem e interagem com os outros”</p>
+    <span>REVISTA HUMAN SPACES: THE GLOBAL IMPACT OF BIOPHILIC DESIGN IN THE WORKPLACE</span>
   </section>
 
   <section class="faq" id="faq" aria-labelledby="faq-title">
@@ -251,9 +251,9 @@
       <div class="section-label">05. Contato</div>
       <h2 id="contact-title">Agende uma conversa técnica sobre o seu espaço</h2>
       <p>Formulário rápido para qualificar seu projeto. Receba retorno técnico em até 24h.</p>
-      <a class="whatsapp-link magnetic" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Chamar no WhatsApp</a>
+      <a class="whatsapp-link magnetic" href="#contato" data-whatsapp-link>Chamar no WhatsApp</a>
     </div>
-    <form class="lead-form reveal" action="#" method="post" data-form="lead">
+    <form class="lead-form reveal" method="post" data-form="lead">
       <input type="hidden" name="segmento" id="segmentInput" value="corporativo">
       <label>
         Nome
@@ -266,6 +266,10 @@
       <label>
         WhatsApp
         <input name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+      </label>
+      <label>
+        Email
+        <input name="email" type="email" autocomplete="email" inputmode="email" placeholder="seu@email.com" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$" title="Informe um email válido, como nome@empresa.com" required>
       </label>
       <label>
         Tipo de projeto
@@ -302,7 +306,7 @@
   <div class="footer-contact">
     <p>Avenida Mofarrej, 348<br>Vila Leopoldina, São Paulo - SP</p>
     <a href="https://kawaigarden.com.br" target="_blank" rel="noreferrer">kawaigarden.com.br</a>
-    <a href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">WhatsApp comercial</a>
+    <a href="#contato" data-whatsapp-link>WhatsApp comercial</a>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Kawai Garden. Todos os direitos reservados.</span>
@@ -310,7 +314,69 @@
   </div>
 </footer>
 
-<a class="floating-whatsapp magnetic" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp">WhatsApp</a>
+<a class="floating-whatsapp magnetic" href="#contato" data-whatsapp-link aria-label="Abrir WhatsApp">WhatsApp</a>
+
+<div class="whatsapp-modal" data-whatsapp-modal hidden>
+  <div class="whatsapp-modal__backdrop" data-whatsapp-close></div>
+  <section class="whatsapp-modal__panel" role="dialog" aria-modal="true" aria-labelledby="whatsapp-modal-title">
+    <button class="whatsapp-modal__close" type="button" aria-label="Fechar formulário" data-whatsapp-close>×</button>
+    <h2 id="whatsapp-modal-title">Fale conosco!</h2>
+    <p>Preencha o formulário abaixo para falar com um dos nossos consultores:</p>
+
+    <form class="whatsapp-modal__form" method="post" data-whatsapp-form>
+      <input type="hidden" name="origem" data-track-field="origem">
+      <input type="hidden" name="pagina" data-track-field="pagina">
+      <input type="hidden" name="referrer" data-track-field="referrer">
+      <input type="hidden" name="utm_source" data-track-field="utm_source">
+      <input type="hidden" name="utm_medium" data-track-field="utm_medium">
+      <input type="hidden" name="utm_campaign" data-track-field="utm_campaign">
+      <input type="hidden" name="utm_content" data-track-field="utm_content">
+      <input type="hidden" name="utm_term" data-track-field="utm_term">
+
+      <label>
+        Nome *
+        <input name="nome" type="text" autocomplete="name" placeholder="Nome" required>
+      </label>
+      <label>
+        Telefone *
+        <input name="telefone" type="tel" autocomplete="tel" placeholder="Telefone" required>
+      </label>
+      <label class="modal-wide">
+        Insira seu email aqui *
+        <input name="email" type="email" autocomplete="email" inputmode="email" placeholder="Email" pattern="^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$" title="Informe um email válido, como nome@empresa.com" required>
+      </label>
+      <label class="modal-wide">
+        O projeto é comercial ou residencial? *
+        <select name="tipo_projeto" required>
+          <option value="">Selecionar</option>
+          <option>Comercial</option>
+          <option>Residencial</option>
+          <option>Corporativo / predial</option>
+        </select>
+      </label>
+      <label class="modal-wide">
+        O espaço é interno ou externo? *
+        <select name="tipo_espaco" required>
+          <option value="">Selecionar</option>
+          <option>Interno</option>
+          <option>Externo</option>
+          <option>Interno e externo</option>
+        </select>
+      </label>
+      <label class="modal-wide">
+        Já possui um projeto de paisagismo ou este é o primeiro contato? *
+        <select name="momento_projeto" required>
+          <option value="">Selecionar</option>
+          <option>Já possuo um projeto</option>
+          <option>Este é o primeiro contato</option>
+          <option>Tenho uma ideia inicial</option>
+        </select>
+      </label>
+      <button class="modal-submit magnetic" type="submit">Entrar em contato!</button>
+      <p class="modal-note" data-whatsapp-status aria-live="polite"></p>
+    </form>
+  </section>
+</div>
 
 <script src="script.js"></script>
 </body>
